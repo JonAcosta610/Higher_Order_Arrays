@@ -171,7 +171,19 @@ let dishes = [
   
   //4. Create a function that will return only dishes whose serving count is even.
   //Filter
-  
+  const evenServingSize = () => {
+    let results = dishes.filter(function (el) {
+        if(el.servings === el.servings % 2) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    });
+    return results;
+  };
+
+  console.log(evenServingSize());
   //5. Create a function that will return dishes whose ingredients array is "tomato" and "cheese".
   //Filter
   
